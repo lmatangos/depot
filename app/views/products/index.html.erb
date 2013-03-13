@@ -1,23 +1,36 @@
 <h1>Listing products</h1>
 
 <table>
+<<<<<<< HEAD
 <% @products.each do |product| %>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
 
     <td>
       <%= image_tag(product.image_url, class: 'list_image') %>
+=======
+ <% @products.each do |product| %>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+
+    <td>
+        <%= image_tag(product.image_url, class: 'list_image') %>
+>>>>>>> 4630ed717308d4f97fcc7c3d32c1f5f8699eeda2
     </td>
 
     <td class="list_description">
       <dl>
         <dt><%= product.title %></dt>
         <dd><%= truncate(strip_tags(product.description), length: 80) %></dd>
+<<<<<<< HEAD
       </dl>  
+=======
+      </dl>
+>>>>>>> 4630ed717308d4f97fcc7c3d32c1f5f8699eeda2
     </td>
 
     <td class="list_actions">
       <%= link_to 'Show', product %><br/>
       <%= link_to 'Edit', edit_product_path(product) %><br/>
+<<<<<<< HEAD
       <%= link_to 'Destroy', product, method: :delete, 
         data: { confirm: 'Are you sure?' } %>
     </td>
@@ -28,3 +41,15 @@
 <br />
 
 <%= link_to 'New product', new_product_path %>
+=======
+      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Product', new_product_path %>
+>>>>>>> 4630ed717308d4f97fcc7c3d32c1f5f8699eeda2
